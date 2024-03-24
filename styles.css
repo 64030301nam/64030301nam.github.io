@@ -1,0 +1,125 @@
+/* Reset ul and li using CSS Grid */
+/* รีเซ็ต ul และ li โดยใช้ CSS Grid */
+ul,
+nav ul {
+    display: grid; /* เปลี่ยนจาก flex เป็น grid */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* กำหนดคอลัมน์ให้ปรับขนาดตามความกว้างของ element */
+    gap: 10px; /* เพิ่มระยะห่างระหว่าง elements */
+}
+
+/* Reset ul and li using Flexbox */
+/* รีเซ็ต ul และ li โดยใช้ Flexbox */
+#education ul,
+#experience ul {
+    display: flex; /* ใช้ flexbox */
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#education ul li,
+#experience ul li {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+/* Center navigation links */
+/* จัดให้อยู่ตรงกลาง */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    text-align: center;
+    display: flex; /* เพิ่มการใช้งาน flexbox */
+    flex-direction: row; /* กำหนดให้เป็นแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
+}
+
+/* Style navigation links */
+/* จัดรูปแบบลิงก์การนำทาง */
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c577ef;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Style header */
+/* จัดรูปแบบส่วนหัว */
+header {
+    background-color: #64d2ed;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Increase font size for details */
+/* เพิ่มขนาดตัวอักษรให้มากขึ้นสำหรับรายละเอียด */
+#personal-info ul li,
+#education ul li,
+#experience ul li {
+    font-size: 18px;
+}
+
+/* Style section headings */
+/* จัดรูปแบบหัวข้อส่วน */
+#personal-info h2,
+#education h2,
+#experience h2 {
+    background-color: #64d2ed;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style footer using CSS Grid */
+/* จัดรูปแบบส่วนท้ายโดยใช้ CSS Grid */
+footer {
+    background-color: #64d2ed;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr; /* กำหนดให้มีคอลัมน์เดียว */
+}
+
+/* Custom styles for custom list */
+/* สไตล์ที่กำหนดเองสำหรับรายการที่กำหนดเอง */
+.custom-list {
+    display: flex; /* เปลี่ยนเป็น flexbox */
+    justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.custom-list li {
+    margin: 0 10px; /* เพิ่มระยะห่างด้านข้างของปุ่ม */
+}
+
+.custom-list li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c577ef;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-list li a:hover {
+    background-color: #45a049;
+}
