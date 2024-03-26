@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation-float.min.css">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome To My Website</h1>
         <nav>
             <ul class="custom-list">
-                <li><div class="custom-box"><a href="index.html">Home Page</a></div></li>
-                <li><div class="custom-box"><a href="javascript_page.html">My friend Information</a></div></li>
-                <li><div class="custom-box"><a href="about.html">About Us</a></div></li>
+                <li>
+                    <div class="custom-box"><a href="index.html">Home Page</a></div>
+                </li>
+                <li>
+                    <div class="custom-box"><a href="javascript_page.html">My friend Information</a></div>
+                </li>
+                <li>
+                    <div class="custom-box"><a href="about.html">About Us</a></div>
+                </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="home">
-            <h2>Home Page</h2>
-            <h3> ยินดีต้อนรับสู่เว็บไซต์ของฉัน </h3> 
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 64030301 Watcharaporn Klaysomboon</p>
-    </footer>
+
+    <body>
+        <div class="container">
+            <h1 class="name">Watcharaporn Klaysomboon</h1>
+            <span class="slogan">-- 64030301 -- </span>
+            <div class="social-img">
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fa tw fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa tw fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa github fa-github"></i></a></li>
+
+                </ul>
+            </div>
+            <p class="bio">
+                Hello World 
+            </p>
+            <hr>
+            <h4>Contact Me</h4>
+            <hr>
+            <form action="">
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <label for="name">Name:
+                            <input type="text" placeholder="Your name">
+                        </label>
+                    </div>
+                    <div class="medium-6 columns">
+                        <label for="email">Email:
+                            <input type="text" placeholder="Your Email">
+                        </label>
+                    </div>
+                    <div class="medium-12 columns">
+                        <label for="message">Message:
+                            <textarea name="message" placeholder="None"></textarea>
+                        </label>
+                        <button class="button">Send</button>
+                    </div>
+                </div>
+                <div class="footer">
+                    Watcharaporn Klaysomboon &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> .All Rights Reserved
+                </div>
+            </form>
+        </div>
+    </body>
     <script src="script.js"></script>
 </body>
+
 </html>

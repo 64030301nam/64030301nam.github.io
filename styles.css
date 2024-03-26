@@ -1,20 +1,108 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+p.bio {
+    text-align: center;
+}
+
+hr {
+    width: 100px;
+    height: 2px;
+    background-color: #2199e8;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+h1.name {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+span.slogan {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(#333, .7);
+    margin-bottom: 35px
+}
+
+.social-img {
+    text-align: center;
+    /* จัดให้ไอคอนอยู่ตรงกลางของหน้าจอ */
+}
+
+.social-img ul {
+    list-style-type: none;
+    /* ลบรายการของรายการ */
+    padding: 0;
+}
+
+.social-img ul li {
+    display: inline-block;
+    background: rgba(204, 204, 204, 0.5);
+    padding: 7px;
+    /* ลด padding เพื่อให้ขนาดของกล่องเท่ากับขนาดของไอคอน */
+    width: 40px;
+    /* กำหนดขนาดของกล่อง */
+    height: 40px;
+    margin: 100 130px;
+    /* เพิ่มระยะห่างระหว่างไอคอน */
+    border-radius: 60%;
+    cursor: pointer;
+    transition: background 150ms ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-img ul li:hover {
+    background: rgba(204, 204, 204, 1);
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.work {
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(#333, 0.5);
+}
+
 /* Reset ul and li using CSS Grid */
 /* รีเซ็ต ul และ li โดยใช้ CSS Grid */
 ul,
 nav ul {
-    display: grid; /* เปลี่ยนจาก flex เป็น grid */
+    display: grid;
+    /* เปลี่ยนจาก flex เป็น grid */
     padding: 0;
     margin: 0;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* กำหนดคอลัมน์ให้ปรับขนาดตามความกว้างของ element */
-    gap: 10px; /* เพิ่มระยะห่างระหว่าง elements */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* กำหนดคอลัมน์ให้ปรับขนาดตามความกว้างของ element */
+    gap: 10px;
+    /* เพิ่มระยะห่างระหว่าง elements */
 }
 
 /* Reset ul and li using Flexbox */
 /* รีเซ็ต ul และ li โดยใช้ Flexbox */
 #education ul,
 #experience ul {
-    display: flex; /* ใช้ flexbox */
+    display: flex;
+    /* ใช้ flexbox */
     flex-direction: column;
     margin-top: 0;
     margin-bottom: 10px;
@@ -35,9 +123,12 @@ nav {
 
 nav ul li {
     text-align: center;
-    display: flex; /* เพิ่มการใช้งาน flexbox */
-    flex-direction: row; /* กำหนดให้เป็นแนวนอน */
-    align-items: center; /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
+    display: flex;
+    /* เพิ่มการใช้งาน flexbox */
+    flex-direction: row;
+    /* กำหนดให้เป็นแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
 }
 
 /* Style navigation links */
@@ -88,41 +179,49 @@ header {
 /* Style footer using CSS Grid */
 /* จัดรูปแบบส่วนท้ายโดยใช้ CSS Grid */
 footer {
-    position: fixed; /* ตั้งค่าให้เป็น fixed */
-    bottom: 0; /* จัดให้อยู่ด้านล่าง */
-    left: 0; /* จัดให้ชิดซ้าย */
-    width: 100%; /* กำหนดความกว้างเท่ากับหน้าจอ */
-  }
-  body {
+    position: fixed;
+    /* ตั้งค่าให้เป็น fixed */
+    bottom: 0;
+    /* จัดให้อยู่ด้านล่าง */
+    left: 0;
+    /* จัดให้ชิดซ้าย */
+    width: 100%;
+    /* กำหนดความกว้างเท่ากับหน้าจอ */
+}
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .wrapper {
-    flex: 1; /* ทำให้ wrapper ขยายตามส่วนคงเหลือของหน้าเว็บ */
-  }
-  
-  footer {
+}
+
+.wrapper {
+    flex: 1;
+    /* ทำให้ wrapper ขยายตามส่วนคงเหลือของหน้าเว็บ */
+}
+
+footer {
     background-color: #64d2ed;
     color: #000000;
     padding: 20px;
     text-align: center;
-  }
-    
+}
 
 /* Custom styles for custom list */
 /* สไตล์ที่กำหนดเองสำหรับรายการที่กำหนดเอง */
 .custom-list {
-    display: flex; /* เปลี่ยนเป็น flexbox */
-    justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    display: flex;
+    /* เปลี่ยนเป็น flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางตามแนวนอน */
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .custom-list li {
-    margin: 0 10px; /* เพิ่มระยะห่างด้านข้างของปุ่ม */
+    margin: 0 10px;
+    /* เพิ่มระยะห่างด้านข้างของปุ่ม */
 }
 
 .custom-list li a {

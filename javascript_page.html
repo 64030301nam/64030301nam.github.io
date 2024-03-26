@@ -2,37 +2,49 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <!-- ส่วนหัวของเอกสาร -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <!-- ลิงก์ไปยังไฟล์ CSS -->
     <link rel="stylesheet" href="style01.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome Link for Icons -->
+    <!-- ลิงก์ไปยังไฟล์ CSS ของ Fontawesome สำหรับไอคอน -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- สคริปต์ที่ถูกเรียกใช้งานในภายหลัง -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- ส่วนหัวของเว็บไซต์ -->
     <header>
         <h1>My friend Information</h1>
+        <!-- เมนูการนำทาง -->
         <nav>
             <ul class="custom-list">
                 <li>
+                    <!-- ลิงก์ไปยังหน้าหลัก -->
                     <div class="custom-box"><a href="index.html">Home Page</a></div>
                 </li>
                 <li>
+                    <!-- ลิงก์ไปยังหน้าข้อมูลเพื่อน -->
                     <div class="custom-box"><a href="javascript_page.html">My friend Information</a></div>
                 </li>
                 <li>
+                    <!-- ลิงก์ไปยังหน้าเกี่ยวกับเรา -->
                     <div class="custom-box"><a href="about.html">About Us</a></div>
                 </li>
             </ul>
         </nav>
     </header>
+    <!-- ส่วนหลักของเว็บไซต์ -->
     <main>
         <div class="wrapper">
+            <!-- ปุ่มเลื่อนซ้าย -->
             <i id="left" class="fa-solid fa-angle-left"></i>
+            <!-- รายการภาพนิ่ง -->
             <ul class="carousel">
+                <!-- การ์ดข้อมูลของเพื่อน -->
                 <li class="card">
                     <div class="img"><img src="tookta.jpg" alt="img"></div>
                     <h2>Chotoka Kannarong</h2>
@@ -69,12 +81,18 @@
                     <span>IG: kammam_km</span>
                 </li>
             </ul>
+            <!-- ปุ่มเลื่อนขวา -->
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
     </main>
-    <footer>
-        <p>&copy; 64030301 Watcharaporn Klaysomboon</p>
-    </footer>
+    <!-- ส่วนสำหรับข้อมูลเพิ่มเติม -->
+    <main>
+        <!-- ข้อมูลการติดต่อ -->
+        <h4 class="info">ชื่อ-นามสกุล ข้อมูลติดต่อ รูปภาพที่ผู้จัดทำได้นำมาใส่ในเว็บไซต์</h4>
+        <!-- ข้อมูลการขออนุญาต -->
+        <h4 class="permission">ผู้จัดทำได้ทำการขออนุญาตเจ้าของรูปภาพแล้ว และเจ้าตัวนั้นได้อนุญาตให้ผู้จัดทำนำมาใช้งานได้
+        </h4>
+    </main>
 </body>
 
 </html>

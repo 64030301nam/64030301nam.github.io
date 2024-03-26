@@ -2,19 +2,23 @@
 /* รีเซ็ต ul และ li โดยใช้ CSS Grid */
 ul,
 nav ul {
-    display: grid; /* เปลี่ยนจาก flex เป็น grid */
+    display: grid;
+    /* เปลี่ยนจาก flex เป็น grid */
     padding: 0;
     margin: 0;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* กำหนดคอลัมน์ให้ปรับขนาดตามความกว้างของ element */
-    gap: 10px; /* เพิ่มระยะห่างระหว่าง elements */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* กำหนดคอลัมน์ให้ปรับขนาดตามความกว้างของ element */
+    gap: 10px;
+    /* เพิ่มระยะห่างระหว่าง elements */
 }
 
 /* Reset ul and li using Flexbox */
 /* รีเซ็ต ul และ li โดยใช้ Flexbox */
 #education ul,
 #experience ul {
-    display: flex; /* ใช้ flexbox */
+    display: flex;
+    /* ใช้ flexbox */
     flex-direction: column;
     margin-top: 0;
     margin-bottom: 10px;
@@ -35,9 +39,12 @@ nav {
 
 nav ul li {
     text-align: center;
-    display: flex; /* เพิ่มการใช้งาน flexbox */
-    flex-direction: row; /* กำหนดให้เป็นแนวนอน */
-    align-items: center; /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
+    display: flex;
+    /* เพิ่มการใช้งาน flexbox */
+    flex-direction: row;
+    /* กำหนดให้เป็นแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่ตรงกลางตามแนวตั้ง */
 }
 
 /* Style navigation links */
@@ -80,49 +87,38 @@ header {
 #experience h2 {
     background-color: #64d2ed;
     color: #000;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-/* Style footer using CSS Grid */
-/* จัดรูปแบบส่วนท้ายโดยใช้ CSS Grid */
-footer {
-    position: fixed; /* ตั้งค่าให้เป็น fixed */
-    bottom: 0; /* จัดให้อยู่ด้านล่าง */
-    left: 0; /* จัดให้ชิดซ้าย */
-    width: 100%; /* กำหนดความกว้างเท่ากับหน้าจอ */
-  }
-  body {
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .wrapper {
-    flex: 1; /* ทำให้ wrapper ขยายตามส่วนคงเหลือของหน้าเว็บ */
-  }
-  
-  footer {
-    background-color: #64d2ed;
-    color: #000000;
-    padding: 20px;
-    text-align: center;
-  }
-    
+}
+
+.wrapper {
+    flex: 1;
+    /* ทำให้ wrapper ขยายตามส่วนคงเหลือของหน้าเว็บ */
+}
+
 
 /* Custom styles for custom list */
 /* สไตล์ที่กำหนดเองสำหรับรายการที่กำหนดเอง */
 .custom-list {
-    display: flex; /* เปลี่ยนเป็น flexbox */
-    justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    display: flex;
+    /* เปลี่ยนเป็น flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางตามแนวนอน */
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .custom-list li {
-    margin: 0 10px; /* เพิ่มระยะห่างด้านข้างของปุ่ม */
+    margin: 0 10px;
+    /* เพิ่มระยะห่างด้านข้างของปุ่ม */
 }
 
 .custom-list li a {

@@ -1,203 +1,308 @@
-/* Import Google font - Poppins */
+/* นำเข้าฟอนต์ Google - Poppins */
 * {
     margin: 20;
+    /* กำหนดขอบ */
     padding: 50;
+    /* กำหนดระยะห่างภายใน */
     box-sizing: border-box;
-  }
-  body {
+    /* คำนวณขอบเขตของกล่อง */
+}
+
+body {
     display: flex;
+    /* แสดงเป็น flexbox */
     padding: 0 35px;
+    /* กำหนดระยะห่างซ้าย-ขวา */
     align-items: center;
+    /* จัดให้เรียงตามแนวแกนตั้ง */
     justify-content: center;
+    /* จัดให้เรียงตามแนวแกนนอน */
     min-height: 100vh;
-    background: linear-gradient(to left top, #031A9A, #8B53FF);
-  }
-  .wrapper {
+    /* ความสูงขั้นต่ำเท่ากับขนาดหน้าจอ */
+    background: linear-gradient(to left top, #031A9A, #ee53ff);
+    /* สีพื้นหลังแบบเฉดสี */
+}
+
+.wrapper {
     max-width: 1100px;
+    /* ความกว้างสูงสุด */
     width: 100%;
+    /* ความกว้างเต็มหน้าจอ */
     position: relative;
-  }
-  .wrapper i {
+    /* ตำแหน่งแบบสัมพันธ์ */
+}
+
+.wrapper i {
     top: 50%;
+    /* ตำแหน่งด้านบน */
     height: 50px;
+    /* ความสูง */
     width: 50px;
+    /* ความกว้าง */
     cursor: pointer;
+    /* ประเภทเคอร์เซอร์ */
     font-size: 1.25rem;
+    /* ขนาดตัวอักษร */
     position: absolute;
+    /* ตำแหน่งแบบสัมพันธ์ */
     text-align: center;
+    /* จัดให้อยู่กึ่งกลาง */
     line-height: 50px;
+    /* ความสูงของบรรทัด */
     background: #fff;
+    /* สีพื้นหลัง */
     border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    /* รูปร่าง */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    /* เงา */
     transform: translateY(-50%);
+    /* การเคลื่อนที่ */
     transition: transform 0.1s linear;
-  }
-  .wrapper i:active{
+    /* การเปลี่ยนแปลง */
+}
+
+.wrapper i:active {
     transform: translateY(-50%) scale(0.85);
-  }
-  .wrapper i:first-child{
+    /* การเปลี่ยนขนาด */
+}
+
+.wrapper i:first-child {
     left: -22px;
-  }
-  .wrapper i:last-child{
+    /* ตำแหน่งซ้าย */
+}
+
+.wrapper i:last-child {
     right: -22px;
-  }
-  .wrapper .carousel{
+    /* ตำแหน่งขวา */
+}
+
+.wrapper .carousel {
     display: grid;
+    /* แสดงเป็น grid */
     grid-auto-flow: column;
+    /* การไหลของเซลล์ */
     grid-auto-columns: calc((100% / 3) - 12px);
+    /* ความกว้างเฉลี่ยของเซลล์ */
     overflow-x: auto;
+    /* การไหลของเนื้อหาในแนวแกนนอน */
     scroll-snap-type: x mandatory;
+    /* ชนิดของการเลื่อน */
     gap: 16px;
+    /* ระยะห่างระหว่างเซลล์ */
     border-radius: 8px;
+    /* รูปร่างของเซลล์ */
     scroll-behavior: smooth;
+    /* การเลื่อนแบบอ่อนโยน */
     scrollbar-width: none;
-  }
-  .carousel::-webkit-scrollbar {
+    /* ควบคุมแถบเลื่อน */
+}
+
+.carousel::-webkit-scrollbar {
     display: none;
-  }
-  .carousel.no-transition {
+    /* ซ่อนแถบเลื่อน */
+}
+
+.carousel.no-transition {
     scroll-behavior: auto;
-  }
-  .carousel.dragging {
+    /* การเลื่อน */
+}
+
+.carousel.dragging {
     scroll-snap-type: none;
+    /* การเลื่อน */
     scroll-behavior: auto;
-  }
-  .carousel.dragging .card {
+    /* การเลื่อน */
+}
+
+.carousel.dragging .card {
     cursor: grab;
+    /* ประเภทเคอร์เซอร์ */
     user-select: none;
-  }
-  .carousel :where(.card, .img) {
+    /* การเลือก */
+}
+
+.carousel :where(.card, .img) {
     display: flex;
+    /* แสดงเป็น flexbox */
     justify-content: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวนอน */
     align-items: center;
-  }
-  .carousel .card {
+    /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+}
+
+.carousel .card {
     scroll-snap-align: start;
+    /* การจับแน่นไปยังจุดเริ่มต้น */
     height: 342px;
+    /* ความสูง */
     list-style: none;
+    /* รายการ */
     background: #fff;
+    /* สีพื้นหลัง */
     cursor: pointer;
-    padding-bottom: 15px;
+    /* ประเภทเคอร์เซอร์ */
+    padding-bottom: 30px;
+    /* ระยะห่างด้านล่าง */
     flex-direction: column;
+    /* ทำให้เรียงตามแนวตั้ง */
     border-radius: 8px;
-  }
-  .carousel .card .img {
+    /* รูปร่าง */
+}
+
+.carousel .card .img {
     background: #8B53FF;
+    /* สีพื้นหลัง */
     height: 148px;
+    /* ความสูง */
     width: 148px;
+    /* ความกว้าง */
     border-radius: 50%;
-  }
-  .card .img img {
+    /* รูปร่าง */
+}
+
+.card .img img {
     width: 140px;
+    /* ความกว้างของภาพ */
     height: 140px;
+    /* ความสูงของภาพ */
     border-radius: 50%;
+    /* รูปร่าง */
     object-fit: cover;
+    /* การจัดขนาดภาพ */
     border: 4px solid #fff;
-  }
-  .carousel .card h2 {
+    /* เส้นขอบ */
+}
+
+.carousel .card h2 {
     font-weight: 500;
+    /* น้ำหนักตัวอักษร */
     font-size: 1.56rem;
+    /* ขนาดตัวอักษร */
     margin: 30px 0 5px;
-  }
-  .carousel .card span {
+    /* ระยะห่างด้านบน ล่าง */
+}
+
+.carousel .card span {
     color: #6A6D78;
+    /* สีข้อความ */
     font-size: 1.31rem;
-  }
-  
-  @media screen and (max-width: 900px) {
+    /* ขนาดตัวอักษร */
+}
+
+@media screen and (max-width: 900px) {
     .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
+        grid-auto-columns: calc((100% / 2) - 9px);
+        /* คำนวณขนาดของเซลล์ */
     }
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     .wrapper .carousel {
-      grid-auto-columns: 100%;
+        grid-auto-columns: 100%;
+        /* ขนาดของเซลล์ */
     }
-  }
-  /* Custom styles for custom list */
-  .custom-list {
-      display: flex; /* เปลี่ยนเป็น flexbox */
-      justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  }
-  
-  .custom-list li {
-      margin: 0 10px; /* เพิ่มระยะห่างด้านข้างของปุ่ม */
-  }
-  
-  .custom-list li a {
-      display: block;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #c577ef;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-  }
-  
-  .custom-list li a:hover {
-      background-color: #45a049;
-  }
-  
-  /* Style header */
+}
+
+/* สไตล์ที่กำหนดเองสำหรับรายการที่กำหนดเอง */
+.custom-list {
+    display: flex;
+    /* แสดงเป็น flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางตามแนวนอน */
+    padding: 0;
+    /* ระยะห่าง */
+    margin: 0;
+    /* ระยะห่าง */
+    list-style: none;
+    /* รายการ */
+}
+
+.custom-list li {
+    margin: 0 10px;
+    /* ระยะห่างด้านข้าง */
+}
+
+.custom-list li a {
+    display: block;
+    /* แสดงเป็นบล็อก */
+    padding: 10px 20px;
+    /* ระยะห่าง */
+    text-decoration: none;
+    /* เพิ่มลิงก์ */
+    color: #ffffff;
+    /* สีข้อความ */
+    background-color: #c577ef;
+    /* สีพื้นหลัง */
+    border-radius: 5px;
+    /* รูปร่าง */
+    transition: background-color 0.3s ease;
+    /* การเปลี่ยนแปลง */
+}
+
+.custom-list li a:hover {
+    background-color: #45a049;
+    /* สีพื้นหลังเมื่อชี้เมาส์ */
+}
+
+/* สไตล์สำหรับส่วนหัว */
 header {
     background-color: #64d2ed;
+    /* สีพื้นหลัง */
     color: #000000;
+    /* สีข้อความ */
     padding: 20px;
+    /* ระยะห่าง */
     text-align: center;
-    margin-bottom: 110px; /* Add margin bottom */
-    width: 160%; /* กำหนดความกว้างเท่ากับหน้าจอ */
+    /* การจัดแนวข้อความ */
+    margin-bottom: 110px;
+    /* ระยะห่างด้านล่าง */
+    width: 160%;
+    /* ความกว้าง */
 }
 
-/* Update main styles */
+/* อัปเดตสไตล์สำหรับส่วนหลัก */
 main {
     flex: 1;
+    /* ความยืดหยุ่น */
     display: flex;
+    /* แสดงเป็น flexbox */
     flex-direction: column;
+    /* การจัดเรียง */
     align-items: center;
+    /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
 }
 
-/* Update wrapper styles */
+/* อัปเดตสไตล์สำหรับ wrapper */
 .wrapper {
     max-width: 1100px;
+    /* ความกว้างสูงสุด */
     width: 90%;
+    /* ความกว้าง */
     position: relative;
+    /* ตำแหน่ง */
     padding: 40px;
+    /* ระยะห่าง */
 }
 
-/* Update footer styles */
-footer {
-    background-color: #64d2ed;
-    color: #000000;
-    padding: 40px;
-    text-align: center;
-}
-
-  
-  /* Style footer using CSS Grid */
-  footer {
-      position: fixed; /* ตั้งค่าให้เป็น fixed */
-      bottom: 0; /* จัดให้อยู่ด้านล่าง */
-      left: 0; /* จัดให้ชิดซ้าย */
-      width: 100%; /* กำหนดความกว้างเท่ากับหน้าจอ */
-    }
-  
-  body {
+body {
     display: flex;
+    /* แสดงเป็น flexbox */
     flex-direction: column;
+    /* การจัดเรียง */
     min-height: 100vh;
-  }
+    /* ความสูงขั้นต่ำของหน้าจอ */
+}
 
 .wrapper {
-  flex: 1; /* ทำให้ wrapper ขยายตามส่วนคงเหลือของหน้าเว็บ */
+    flex: 1;
+    /* ความยืดหยุ่น */
 }
 
-footer {
-  background-color: #64d2ed;
-  color: #000000;
-  padding: 10px;
-  text-align: center;
+h4 {
+    color: white;
+    /* สีข้อความ */
+    text-align: center;
+    /* การจัดแนวข้อความ */
+    margin-top: 1px;
+    /* ระยะห่างด้านบน */
 }
