@@ -1,24 +1,6 @@
-/* นำเข้าฟอนต์ Google - Poppins */
-* {
-    margin: 20;
-    /* กำหนดขอบ */
-    padding: 50;
-    /* กำหนดระยะห่างภายใน */
-    box-sizing: border-box;
-    /* คำนวณขอบเขตของกล่อง */
-}
-
 body {
     display: flex;
-    /* แสดงเป็น flexbox */
-    padding: 0 35px;
-    /* กำหนดระยะห่างซ้าย-ขวา */
-    align-items: center;
-    /* จัดให้เรียงตามแนวแกนตั้ง */
-    justify-content: center;
-    /* จัดให้เรียงตามแนวแกนนอน */
-    min-height: 100vh;
-    /* ความสูงขั้นต่ำเท่ากับขนาดหน้าจอ */
+    flex-direction: column;
     background: linear-gradient(to left top, #031A9A, #ee53ff);
     /* สีพื้นหลังแบบเฉดสี */
 }
@@ -250,13 +232,11 @@ header {
     /* สีพื้นหลัง */
     color: #000000;
     /* สีข้อความ */
-    padding: 20px;
+    padding: 20px 0px;
     /* ระยะห่าง */
     text-align: center;
     /* การจัดแนวข้อความ */
-    margin-bottom: 110px;
-    /* ระยะห่างด้านล่าง */
-    width: 160%;
+    width: 100%;
     /* ความกว้าง */
 }
 
@@ -282,15 +262,6 @@ main {
     /* ตำแหน่ง */
     padding: 40px;
     /* ระยะห่าง */
-}
-
-body {
-    display: flex;
-    /* แสดงเป็น flexbox */
-    flex-direction: column;
-    /* การจัดเรียง */
-    min-height: 100vh;
-    /* ความสูงขั้นต่ำของหน้าจอ */
 }
 
 .wrapper {
